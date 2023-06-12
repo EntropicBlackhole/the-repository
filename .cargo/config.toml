@@ -1,0 +1,5 @@
+[unstable]
+bindeps = true
+
+[build]
+rustflags = ["--remap-path-prefix", "C:\\Users\\EliOz=~"]

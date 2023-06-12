@@ -1,0 +1,6 @@
+[submodule "apic-rs"]
+	path = apic-rs
+	url = https://github.com/rcore-os/apic-rs.git
+[submodule "crates/apic-rs"]
+	path = crates/apic-rs
+	url = https://github.com/rcore-os/apic-rs.git

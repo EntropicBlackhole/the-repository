@@ -1,0 +1,20 @@
+[workspace]
+members = ["kernel"]
+#  "crates/apic-rs"
+[package]
+name = "webos"
+version = "0.1.0"
+edition = "2021"
+
+[build-dependencies]
+bootloader = "0.11.3"
+kernel = { path = "kernel", artifact = "bin", target = "x86_64-unknown-none" }
+
+[profile.release]
+lto = true          # Enable link-time optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations
+panic = "abort"     # Abort on panic
+strip = true        # Strip symbols from binary
+
+[dependencies]
+ovmf-prebuilt = "0.1.0-alpha.1"
